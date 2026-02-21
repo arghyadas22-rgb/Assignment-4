@@ -50,21 +50,21 @@
                     <div class="card w-full bg-base-100 card-xs shadow-sm p-5">
                         <div class="card-body">
                             <h2 class="card-title font-medium">Total</h2>
-                            <h2 class="font-bold text-[1.5rem] text-[#002C5C]">8</h2>
+                            <h2 id="total-count" class="font-bold text-[1.5rem] text-[#002C5C]">8</h2>
                         </div>
                     </div>
 
                     <div class="card w-full bg-base-100 card-xs shadow-sm p-5">
                         <div class="card-body">
                             <h2 class="card-title font-medium">Interview</h2>
-                            <h2 class="font-bold text-[1.5rem] text-[#10B981]">0</h2>
+                            <h2 id="interview-count" class="font-bold text-[1.5rem] text-[#10B981]">0</h2>
                         </div>
                     </div>
 
                     <div class="card w-full bg-base-100 card-xs shadow-sm p-5">
                         <div class="card-body">
                             <h2 class="card-title font-medium">Rejected</h2>
-                            <h2 class="font-bold text-[1.5rem] text-[#EF4444]">0</h2>
+                            <h2 id="rejected-count" class="font-bold text-[1.5rem] text-[#EF4444]">0</h2>
                         </div>
                     </div> 
                 </div>
@@ -81,23 +81,23 @@
             </div>
 
             <div class="mt-[30px]">
-                <button class="rounded-md bg-[#3B82F6] text-white text-[12px] font-medium cursor-pointer w-20 h-8 mr-2">
+                <button id="filter-all" class="rounded-md bg-[#3B82F6] text-white text-[12px] font-medium cursor-pointer w-20 h-8 mr-2">
                   All  
                 </button>
-                <button class="w-20 h-8 text-[12px] rounded-md shadow-sm font-medium cursor-pointer mr-2">
+                <button id="filter-interview" class="w-20 h-8 text-[12px] rounded-md shadow-sm font-medium cursor-pointer mr-2">
                     Interview
                 </button>
-                <button class="w-20 h-8 text-[12px] rounded-md shadow-sm  cursor-pointer  font-medium ">
+                <button id="filter-rection" class="w-20 h-8 text-[12px] rounded-md shadow-sm  cursor-pointer  font-medium ">
                     Rejected
                 </button>
             </div>
 
             
-            <div class="crad shadow-sm my-4 p-6 mb-4 relative">
+            <div class="job-crad shadow-sm my-4 p-6 mb-4 relative">
 
                 <!-- delete icon top right corner -->
 
-                <button class="absolute  top-8 right-6 cursor-pointer border-2 border-[#F1F2F4] p-1.5 rounded-full">
+                <button class="delete-btn  absolute  top-8 right-6 cursor-pointer border-2 border-[#F1F2F4] p-1.5 rounded-full">
                     <i class="fa-regular fa-trash-can text-lg text-[#64748B]"></i>
                 </button>
 
@@ -106,15 +106,15 @@
                 <h2 class="text-[#002C5C] text-[1.12rem] font-semibold mb-1">Mobile First Corp</h2>
                 <p class="text-[#64748B] mb-5">React Native Developer</p>
                 <p class="323B49 mb-5">Remote • Full-time • $130,000 - $175,000</p>
-                <button class="btn btn-primary btn-soft mb-2">NOT APPLIED</button>
+                <button class="status-btn btn btn-primary btn-soft mb-2">NOT APPLIED</button>
                 <p class="text-[#323B49] mb-5">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-                <button class="btn border-2 border-[#10B981] text-[#10B981] mr-2">INTERVIEW</button>
-                <button class="btn border-2 border-[#EF4444] text-[#EF4444]">REJECTED</button>
+                <button class="interview-btn btn border-2 border-[#10B981] text-[#10B981] mr-2">INTERVIEW</button>
+                <button class="reject-btn btn border-2 border-[#EF4444] text-[#EF4444]">REJECTED</button>
             </div>
 
-            <div class="crad shadow-sm my-4 p-6 mb-4 relative">
+            <div class="job-crad shadow-sm my-4 p-6 mb-4 relative">
 
-                <button class="absolute right-8 top-6 cursor-pointer border-2 border-[#F1F2F4] p-1.5 rounded-full">
+                <button class="delete-btn  absolute right-8 top-6 cursor-pointer border-2 border-[#F1F2F4] p-1.5 rounded-full">
                     <i class="fa-regular fa-trash-can text-lg text-[#64748B]"></i>
                 </button>
 
@@ -122,15 +122,15 @@
                 <h2 class="text-[#002C5C] text-[1.12rem] font-semibold mb-1">WebFlow Agency</h2>
                 <p class="text-[#64748B] mb-5">Web Designer & Developer</p>
                 <p class="323B49 mb-5">Los Angeles, CA • Part-time • $80,000 - $120,000</p>
-                <button class="btn btn-primary btn-soft mb-2">NOT APPLIED</button>
+                <button class="status-btn btn btn-primary btn-soft mb-2">NOT APPLIED</button>
                 <p class="text-[#323B49] mb-5">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
-                <button class="btn border-2 border-[#10B981] text-[#10B981] mr-2">INTERVIEW</button>
-                <button class="btn border-2 border-[#EF4444] text-[#EF4444]">REJECTED</button>
+                <button class="interview-btn btn border-2 border-[#10B981] text-[#10B981] mr-2">INTERVIEW</button>
+                <button class="reject-btn btn border-2 border-[#EF4444] text-[#EF4444]">REJECTED</button>
             </div>
 
-            <div class="crad shadow-sm my-4 p-6 mb-4 relative">
+            <div class="job-crad shadow-sm my-4 p-6 mb-4 relative">
 
-                <button class="absolute right-8 top-6 cursor-pointer border-2 border-[#F1F2F4] p-1.5 rounded-full">
+                <button class="delete-btn absolute right-8 top-6 cursor-pointer border-2 border-[#F1F2F4] p-1.5 rounded-full">
                     <i class="fa-regular fa-trash-can text-lg text-[#64748B]"></i>
                 </button>
 
@@ -139,30 +139,30 @@
                 <h2 class="text-[#002C5C] text-[1.12rem] font-semibold mb-1">Tech Solutions Ltd</h2>
                 <p class="text-[#64748B] mb-5">Frontend Developer</p>
                 <p class="323B49 mb-5">Onsite • Full-time • $90,000 - $120,000</p>
-                <button class="btn btn-primary btn-soft mb-2">NOT APPLIED</button>
+                <button class="status-btn btn btn-primary btn-soft mb-2">NOT APPLIED</button>
                 <p class="text-[#323B49] mb-5">Develop responsive web applications using React and Tailwind CSS. Collaborate with design and backend teams.</p>
-                <button class="btn border-2 border-[#10B981] text-[#10B981] mr-2">INTERVIEW</button>
-                <button class="btn border-2 border-[#EF4444] text-[#EF4444]">REJECTED</button>
+                <button class="interview-btn btn border-2 border-[#10B981] text-[#10B981] mr-2">INTERVIEW</button>
+                <button class="reject-btn btn border-2 border-[#EF4444] text-[#EF4444]">REJECTED</button>
             </div>
 
-            <div class="crad shadow-sm my-4 p-6 mb-4 relative">
+            <div class="job-crad shadow-sm my-4 p-6 mb-4 relative">
 
-                <button class="absolute right-8 top-6 cursor-pointer border-2 border-[#F1F2F4] p-1.5 rounded-full">
+                <button class="delete-btn absolute right-8 top-6 cursor-pointer border-2 border-[#F1F2F4] p-1.5 rounded-full">
                     <i class="fa-regular fa-trash-can text-lg text-[#64748B]"></i>
                 </button>
 
                 <h2 class="text-[#002C5C] text-[1.12rem] font-semibold mb-1">Global Apps Inc</h2>
                 <p class="text-[#64748B] mb-5">Backend Engineer</p>
                 <p class="323B49 mb-5">Remote • Full-time • $100,000 - $130,000</p>
-                <button class="btn btn-primary btn-soft mb-2">NOT APPLIED</button>
+                <button class="status-btn btn btn-primary btn-soft mb-2">NOT APPLIED</button>
                 <p class="text-[#323B49] mb-5">Build and maintain APIs using Node.js and Express. Ensure high performance and scalability.</p>
-                <button class="btn border-2 border-[#10B981] text-[#10B981] mr-2">INTERVIEW</button>
-                <button class="btn border-2 border-[#EF4444] text-[#EF4444]">REJECTED</button>
+                <button class="interview-btn btn border-2 border-[#10B981] text-[#10B981] mr-2">INTERVIEW</button>
+                <button class="reject-btn btn border-2 border-[#EF4444] text-[#EF4444]">REJECTED</button>
             </div>
 
-            <div class="crad shadow-sm my-4 p-6 mb-4 relative">
+            <div class="job-crad shadow-sm my-4 p-6 mb-4 relative">
 
-                <button class="absolute right-8 top-6 cursor-pointer border-2 border-[#F1F2F4] p-1.5 rounded-full">
+                <button class="delete-btn absolute right-8 top-6 cursor-pointer border-2 border-[#F1F2F4] p-1.5 rounded-full">
                     <i class="fa-regular fa-trash-can text-lg text-[#64748B]"></i>
                 </button>
 
@@ -170,15 +170,15 @@
                 <h2 class="text-[#002C5C] text-[1.12rem] font-semibold mb-1">EduLearn</h2>
                 <p class="text-[#64748B] mb-5">React Native Developer</p>
                 <p class="323B49 mb-5">Onsite • Full-time • $80,000 - $110,000</p>
-                <button class="btn btn-primary btn-soft mb-2">NOT APPLIED</button>
+                <button class="status-btn btn btn-primary btn-soft mb-2">NOT APPLIED</button>
                 <p class="text-[#323B49] mb-5">Build educational mobile apps, integrate APIs, and optimize performance.</p>
-                <button class="btn border-2 border-[#10B981] text-[#10B981] mr-2">INTERVIEW</button>
-                <button class="btn border-2 border-[#EF4444] text-[#EF4444]">REJECTED</button>
+                <button class="interview-btn btn border-2 border-[#10B981] text-[#10B981] mr-2">INTERVIEW</button>
+                <button class="reject-btn btn border-2 border-[#EF4444] text-[#EF4444]">REJECTED</button>
             </div>
 
-            <div class="crad shadow-sm my-4 p-6 mb-4 relative">
+            <div class="job-crad shadow-sm my-4 p-6 mb-4 relative">
 
-                <button class="absolute right-8 top-6 cursor-pointer border-2 border-[#F1F2F4] p-1.5 rounded-full">
+                <button class="delete-btn absolute right-8 top-6 cursor-pointer border-2 border-[#F1F2F4] p-1.5 rounded-full">
                     <i class="fa-regular fa-trash-can text-lg text-[#64748B]"></i>
                 </button>
 
@@ -186,44 +186,48 @@
                 <h2 class="text-[#002C5C] text-[1.12rem] font-semibold mb-1">NextGen Tech</h2>
                 <p class="text-[#64748B] mb-5">Full Stack Developer</p>
                 <p class="323B49 mb-5">Remote • Full-time • $95,000 - $125,000</p>
-                <button class="btn btn-primary btn-soft mb-2">NOT APPLIED</button>
+                <button class="status-btn btn btn-primary btn-soft mb-2">NOT APPLIED</button>
                 <p class="text-[#323B49] mb-5">Work on both frontend and backend using React and Node.js. Maintain database and APIs.</p>
-                <button class="btn border-2 border-[#10B981] text-[#10B981] mr-2">INTERVIEW</button>
-                <button class="btn border-2 border-[#EF4444] text-[#EF4444]">REJECTED</button>
+                <button class="interview-btn btn border-2 border-[#10B981] text-[#10B981] mr-2">INTERVIEW</button>
+                <button class="reject-btn btn border-2 border-[#EF4444] text-[#EF4444]">REJECTED</button>
             </div>
+            <div class="job-crad shadow-sm my-4 p-6 mb-4 relative">
 
-            <div class="crad shadow-sm my-4 p-6 mb-4 relative">
-
-                <button class="absolute right-8 top-6 cursor-pointer border-2 border-[#F1F2F4] p-1.5 rounded-full">
+                <button class="delete-btn absolute right-8 top-6 cursor-pointer border-2 border-[#F1F2F4] p-1.5 rounded-full">
                     <i class="fa-regular fa-trash-can text-lg text-[#64748B]"></i>
                 </button>
 
 
-                <h2 class="text-[#002C5C] text-[1.12rem] font-semibold mb-1">CloudWorks Inc</h2>
-                <p class="text-[#64748B] mb-5">AWS Cloud Engineer</p>
-                <p class="323B49 mb-5">Remote • Contract • $70/hr</p>
-                <button class="btn btn-primary btn-soft mb-2">NOT APPLIED</button>
-                <p class="text-[#323B49] mb-5">Deploy and manage AWS infrastructure, monitor cloud performance, and optimize cost.</p>
-                <button class="btn border-2 border-[#10B981] text-[#10B981] mr-2">INTERVIEW</button>
-                <button class="btn border-2 border-[#EF4444] text-[#EF4444]">REJECTED</button>
+                <h2 class="text-[#002C5C] text-[1.12rem] font-semibold mb-1">NextGen Tech</h2>
+                <p class="text-[#64748B] mb-5">Full Stack Developer</p>
+                <p class="323B49 mb-5">Remote • Full-time • $95,000 - $125,000</p>
+                <button class="status-btn btn btn-primary btn-soft mb-2">NOT APPLIED</button>
+                <p class="text-[#323B49] mb-5">Work on both frontend and backend using React and Node.js. Maintain database and APIs.</p>
+                <button class="interview-btn btn border-2 border-[#10B981] text-[#10B981] mr-2">INTERVIEW</button>
+                <button class="reject-btn btn border-2 border-[#EF4444] text-[#EF4444]">REJECTED</button>
             </div>
+            <div class="job-crad shadow-sm my-4 p-6 mb-4 relative">
 
-            <div class="crad shadow-sm my-4 p-6 relative">
-
-                <button class="absolute right-8 top-6 cursor-pointer border-2 border-[#F1F2F4] p-1.5 rounded-full">
+                <button class="delete-btn absolute right-8 top-6 cursor-pointer border-2 border-[#F1F2F4] p-1.5 rounded-full">
                     <i class="fa-regular fa-trash-can text-lg text-[#64748B]"></i>
                 </button>
 
 
-                <h2 class="text-[#002C5C] text-[1.12rem] font-semibold mb-1">HealthTech Global</h2>
-                <p class="text-[#64748B] mb-5">Mobile QA Engineer</p>
-                <p class="323B49 mb-5">Remote • Full-time • $70,000 - $90,000</p>
-                <button class="btn btn-primary btn-soft mb-2">NOT APPLIED</button>
-                <p class="text-[#323B49] mb-5">Test mobile applications for bugs and usability issues. Automate test scripts using Appium.</p>
-                <button class="btn border-2 border-[#10B981] text-[#10B981] mr-2">INTERVIEW</button>
-                <button class="btn border-2 border-[#EF4444] text-[#EF4444]">REJECTED</button>
+                <h2 class="text-[#002C5C] text-[1.12rem] font-semibold mb-1">NextGen Tech</h2>
+                <p class="text-[#64748B] mb-5">Full Stack Developer</p>
+                <p class="323B49 mb-5">Remote • Full-time • $95,000 - $125,000</p>
+                <button class="status-btn btn btn-primary btn-soft mb-2">NOT APPLIED</button>
+                <p class="text-[#323B49] mb-5">Work on both frontend and backend using React and Node.js. Maintain database and APIs.</p>
+                <button class="interview-btn btn border-2 border-[#10B981] text-[#10B981] mr-2">INTERVIEW</button>
+                <button class="reject-btn btn border-2 border-[#EF4444] text-[#EF4444]">REJECTED</button>
             </div>
 
         </section>
+
+
+        <script src="./script/script.js"></script>
   </body>
+
+
+  
 </html>
