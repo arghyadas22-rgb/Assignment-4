@@ -24,6 +24,7 @@ jobCards.forEach(card => {
         statusBtn.classList.add("btn-success");
         card.dataset.status = "interview";
         updateCounter();
+        updateJobsText();
     })
 
     rejectedBtn.addEventListener("click", () => {
@@ -32,6 +33,7 @@ jobCards.forEach(card => {
         statusBtn.classList.add("btn-error");
         card.dataset.status = "rejected";
         updateCounter();
+        updateJobsText();
     })
 
     // delete click
@@ -40,6 +42,7 @@ jobCards.forEach(card => {
         card.remove();
         updateTotal();
         updateCounter();
+        updateJobsText();
     })
 
 })
@@ -70,5 +73,47 @@ function updateTotal() {
     const cards = document.querySelectorAll(".job-crad");
     totalCount.innerText = cards.length;
 }
+
+function updateJobsText(){
+    const cards = document.querySelectorAll(".job-crad");
+
+    let selected = 0;
+
+    cards.forEach (card => {
+        if(card.dataset.status === "interview" || card.dataset.status === "rejected"){
+            selected++;
+        }
+    });
+
+    const jobsText =document.getElementById("jobs-text");
+    jobsText.innerText = `${selected} of ${cards.length} jobs`;
+}
+
+// FILTER SECTION  Some help is needed from different places.
+
+const  filterAll = document.getElementById("filter-all");
+const  filterInterview = document.getElementById("filter-interview");
+const  filterRejected = document.getElementById("filter-rejected");
+
+filterAll.addEventListener("click" , () => {
+    document.querySelectorAll(".job-crad").forEach(card => {
+        card.style.display = "block"
+    })
+})
+
+filterInterview.addEventListener("click" , () => {
+    document.querySelectorAll(".job-crad").forEach(card => {
+        card.style.display =
+            card.dataset.status === "interview" ? "block" : "none";
+    })
+})
+
+filterRejected.addEventListener("click" , () => {
+    document.querySelectorAll(".job-crad").forEach(card => {
+        card.style.display = 
+            card.dataset.status === "rejected" ? "block" : "none";
+    })
+})
+
 
 
