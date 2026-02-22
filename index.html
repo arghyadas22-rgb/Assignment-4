@@ -40,10 +40,15 @@
 
   </head>
 
+  <!-- RESPONSIVE BREAKPOINT USE 640PX -->
 
-  <body class="container mx-auto">
-        <section>
-                <h2 class="font-bold text-[2rem] text-[#002C5C] pt-5 pb-5">
+
+
+  <body class="container mx-auto px-2.5 sm:px-0">
+
+        <section class="job-counter">
+
+                <h2 class="font-bold text-[2rem] text-[#002C5C] pt-5 pb-5 text-center sm:text-left">
                     Job Application Tracker
                 </h2>
                 <div class="grid grid-cols-3 gap-5">
@@ -74,13 +79,14 @@
                 </div>
         </section>
 
-        <section>
-            <div class="flex justify-between items-center">
+        <section class="all-jobs-container">
+
+            <div class="flex justify-between items-center px-1 sm:px-0">
                 <h2 class="text-[#002C5C] font-semibold text-[1.25rem]">Available Jobs</h2>
                 <h2 id="jobs-text" class="text-[1.25rem] font-medium text-[#323B49]">0 0f 8 jobs</h2>
             </div>
 
-            <div class="mt-[30px]">
+            <div class="mt-[30px] px-1 sm:px-0">
                 <button id="filter-all" class="rounded-md bg-[#3B82F6] text-white text-[12px] font-medium cursor-pointer w-20 h-8 mr-2 hover:bg-[#3B82F6]">
                   All  
                 </button>

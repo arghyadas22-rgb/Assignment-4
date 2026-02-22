@@ -1,7 +1,7 @@
 const jobCards = document.querySelectorAll(".job-crad");
 
 
-const noJobsMsg = document.getElementById("no-jobs-msg")
+const noJobsMsg = document.getElementById("no-jobs-msg");
 
 
 // count element
