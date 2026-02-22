@@ -1,4 +1,7 @@
-const jobCards = document.querySelectorAll(".job-crad")
+const jobCards = document.querySelectorAll(".job-crad");
+
+
+const noJobsMsg = document.getElementById("no-jobs-msg")
 
 
 // count element
@@ -96,23 +99,62 @@ const  filterInterview = document.getElementById("filter-interview");
 const  filterRejected = document.getElementById("filter-rejected");
 
 filterAll.addEventListener("click" , () => {
-    document.querySelectorAll(".job-crad").forEach(card => {
-        card.style.display = "block"
-    })
+    
+    const cards = document.querySelectorAll(".job-crad");
+    cards.forEach(card => card.style.display = "block");
+
+    // Hide the no-jobs message when All tab clicked
+
+        noJobsMsg.classList.add("hidden");
+        noJobsMsg.classList.remove("flex");
+
 })
 
 filterInterview.addEventListener("click" , () => {
-    document.querySelectorAll(".job-crad").forEach(card => {
-        card.style.display =
-            card.dataset.status === "interview" ? "block" : "none";
+    const cards = document.querySelectorAll(".job-crad");
+    let interviewExists = false;
+
+    cards.forEach(card => {
+        if(card.dataset.status === "interview"){
+            card.style.display = "block";
+            interviewExists = true;
+        }else{
+            card.style.display = "none";
+        }
     })
+
+    if(!interviewExists){
+        noJobsMsg.classList.remove("hidden");
+        noJobsMsg.classList.add("flex");
+    }else{
+        noJobsMsg.classList.add("hidden");
+        noJobsMsg.classList.remove("flex");
+        
+    }
 })
 
 filterRejected.addEventListener("click" , () => {
-    document.querySelectorAll(".job-crad").forEach(card => {
-        card.style.display = 
-            card.dataset.status === "rejected" ? "block" : "none";
+    
+    const cards = document.querySelectorAll(".job-crad");
+    let rejectedExists = false;
+
+    cards.forEach(card => {
+        if(card.dataset.status === "rejected"){
+            card.style.display = "block";
+            rejectedExists = true;
+        }else{
+            card.style.display = "none";
+        }
     })
+
+    if(!rejectedExists){
+        noJobsMsg.classList.remove("hidden");
+        noJobsMsg.classList.add("flex");
+    }else{
+        noJobsMsg.classList.add("hidden");
+        noJobsMsg.classList.remove("flex");
+    }
+    
 })
 
 
