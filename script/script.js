@@ -3,6 +3,8 @@ const jobCards = document.querySelectorAll(".job-crad");
 
 const noJobsMsg = document.getElementById("no-jobs-msg");
 
+let activeFilter = "all";
+
 
 // count element
 
@@ -46,9 +48,38 @@ jobCards.forEach(card => {
         updateTotal();
         updateCounter();
         updateJobsText();
+        applyCurrentFilter();
     })
 
 })
+
+
+function applyCurrentFilter() {
+    const cards = document.querySelectorAll(".job-crad");
+    let exists = false;
+
+    cards.forEach(card => {
+        if(activeFilter === "all") {
+            card.style.display = "block";
+            exists = true;
+        } else if(card.dataset.status === activeFilter) {
+            card.style.display = "block";
+            exists = true;
+        } else {
+            card.style.display = "none";
+        }
+    });
+
+    if(!exists) {
+        noJobsMsg.classList.remove("hidden");
+        noJobsMsg.classList.add("flex");
+    } else {
+        noJobsMsg.classList.add("hidden");
+        noJobsMsg.classList.remove("flex");
+    }
+}
+
+
 
 function updateCounter(){
     let interview =0;
@@ -98,64 +129,20 @@ const  filterAll = document.getElementById("filter-all");
 const  filterInterview = document.getElementById("filter-interview");
 const  filterRejected = document.getElementById("filter-rejected");
 
-filterAll.addEventListener("click" , () => {
-    
-    const cards = document.querySelectorAll(".job-crad");
-    cards.forEach(card => card.style.display = "block");
 
-    // Hide the no-jobs message when All tab clicked
+filterAll.addEventListener("click", () => {
+    activeFilter = "all";
+    applyCurrentFilter();
+});
 
-        noJobsMsg.classList.add("hidden");
-        noJobsMsg.classList.remove("flex");
+filterInterview.addEventListener("click", () => {
+    activeFilter = "interview";
+    applyCurrentFilter();
+});
 
-})
-
-filterInterview.addEventListener("click" , () => {
-    const cards = document.querySelectorAll(".job-crad");
-    let interviewExists = false;
-
-    cards.forEach(card => {
-        if(card.dataset.status === "interview"){
-            card.style.display = "block";
-            interviewExists = true;
-        }else{
-            card.style.display = "none";
-        }
-    })
-
-    if(!interviewExists){
-        noJobsMsg.classList.remove("hidden");
-        noJobsMsg.classList.add("flex");
-    }else{
-        noJobsMsg.classList.add("hidden");
-        noJobsMsg.classList.remove("flex");
-        
-    }
-})
-
-filterRejected.addEventListener("click" , () => {
-    
-    const cards = document.querySelectorAll(".job-crad");
-    let rejectedExists = false;
-
-    cards.forEach(card => {
-        if(card.dataset.status === "rejected"){
-            card.style.display = "block";
-            rejectedExists = true;
-        }else{
-            card.style.display = "none";
-        }
-    })
-
-    if(!rejectedExists){
-        noJobsMsg.classList.remove("hidden");
-        noJobsMsg.classList.add("flex");
-    }else{
-        noJobsMsg.classList.add("hidden");
-        noJobsMsg.classList.remove("flex");
-    }
-    
-})
-
+filterRejected.addEventListener("click", () => {
+    activeFilter = "rejected";
+    applyCurrentFilter();
+});
 
 
